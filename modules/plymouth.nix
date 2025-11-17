@@ -1,3 +1,4 @@
+## Plymoth: Boot stuff
 _: {
   boot = {
     plymouth = {
@@ -17,6 +18,6 @@ _: {
       "rd.udev.log_level=3"
       "udev.log_priority=3"
     ];
-    loader.timeout = 1;
+    loader.timeout = 5;
   };
 }

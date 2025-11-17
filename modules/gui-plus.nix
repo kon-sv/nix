@@ -19,6 +19,9 @@
       mpv
 
       kitty-themes
+
+      # wayland
+      wl-clipboard
     ];
   };
 

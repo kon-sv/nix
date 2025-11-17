@@ -4,6 +4,7 @@
 {
   config,
   pkgs,
+  vars,
   ...
 }: {
   imports = [
@@ -65,7 +66,7 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.konsv = {
+  users.users.${vars.user} = {
     isNormalUser = true;
     #passwordFile = config.age.secrets.password.path;
     hashedPassword = "$6$p.PTq0N9RhyOy3ch$XLYie7r6AjjD5rHWYJKYms7iSvCSjJZccrAwDxU0zBRMUBADGFwCV297TXTavvkgt6zK.mer3BGklB1kJeExb/";
@@ -99,6 +100,9 @@
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-emoji
+
+    dejavu_fonts
+    nerd-fonts.dejavu-sans-mono
   ];
 
   programs = {
@@ -116,7 +120,6 @@
         ];
       };
     };
-
   };
 
   # Some programs need SUID wrappers, can be configured further or are

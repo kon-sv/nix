@@ -11,6 +11,7 @@
     # ../../modules/ai.nix
     # ../../modules/amdgpu-patch/default.nix
     # ../../modules/amdgpu.nix
+    ../../modules/amdgpu-gaming.nix
     ../../modules/cli.nix
     # ../../modules/default.nix
     # ../../modules/desktop.nix
@@ -37,28 +38,31 @@
     ../../modules/web.nix
     ../../modules/tui.nix
     ../../modules/media.nix
+
+    # steam boot
+    ../../modules/steam-boot.nix
   ];
 
   networking.hostName = "ayame"; # Define your hostname.
 
-  services.xserver.enable = true;
-  services.xserver.videoDrivers = ["amdgpu"];
+  # services.xserver.enable = true;
+  # services.xserver.videoDrivers = ["amdgpu"];
 
   # Enable AMD GPU overclocking
   # boot.kernelParams = ["amdgpu.ppfeaturemask=0xfffffff"];
-  boot.kernelPatches = [
-    {
-      name = "amdgpu-ignore-ctx-privileges";
-      patch = pkgs.fetchpatch {
-        name = "cap_sys_nice_begone.patch";
-        url = "https://github.com/Frogging-Family/community-patches/raw/master/linux61-tkg/cap_sys_nice_begone.mypatch";
-        hash = "sha256-Y3a0+x2xvHsfLax/uwycdJf3xLxvVfkfDVqjkxNaYEo=";
-      };
-    }
-  ];
+  # boot.kernelPatches = [
+  #   {
+  #     name = "amdgpu-ignore-ctx-privileges";
+  #     patch = pkgs.fetchpatch {
+  #       name = "cap_sys_nice_begone.patch";
+  #       url = "https://github.com/Frogging-Family/community-patches/raw/master/linux61-tkg/cap_sys_nice_begone.mypatch";
+  #       hash = "sha256-Y3a0+x2xvHsfLax/uwycdJf3xLxvVfkfDVqjkxNaYEo=";
+  #     };
+  #   }
+  # ];
 
   # Enable nct6775 module for sensor readings
-  boot.kernelModules = ["nct6775" "amdgpu"];
+  # boot.kernelModules = ["nct6775" "amdgpu"];
 
   # Enable firmware service
   services.fwupd.enable = true;

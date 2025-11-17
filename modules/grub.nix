@@ -1,3 +1,5 @@
+# Ayame apart from NixOS has also Arch Linux and Windows installed.
+# OS Prober was able to find Windows but I am not sure why it can't for Arch
 {
   pkgs,
   lib,

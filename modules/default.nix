@@ -1,3 +1,5 @@
+# WARN: Not in use. Usually all this goes to the specific host
+#
 {
   pkgs,
   vars,
@@ -72,7 +74,6 @@
   # environment.variables = {NH_FLAKE = "/home/${vars.user}/git/nixos";};
 
   programs.zsh.enable = true;
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
