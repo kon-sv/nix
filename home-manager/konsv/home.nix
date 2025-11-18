@@ -46,12 +46,13 @@ in
         ]
         ++ (
           if onGui
-          then with pkgs; [
-            mpv
-            discord-ptb
-            spotify
-            krita
-          ]
+          then
+            with pkgs; [
+              mpv
+              discord-ptb
+              spotify
+              krita
+            ]
           else []
         );
 
@@ -112,7 +113,7 @@ in
         kitty = {
           enable = onGui;
           font = {
-            size = 12;
+            size = 14;
             name = "DejaVu Sans";
           };
           themeFile = "ayu";

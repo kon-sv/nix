@@ -18,6 +18,6 @@ _: {
       "rd.udev.log_level=3"
       "udev.log_priority=3"
     ];
-    loader.timeout = 5;
+    loader.timeout = 2;
   };
 }

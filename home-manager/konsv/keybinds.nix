@@ -498,9 +498,9 @@ in {
     ];
     nixvim = [
       # NvimTree
-      (mkKeymap "<leader>e" "<cmd>Neotree reveal<cr>" "󰙅 Toggle Explorer (Reveal)")
+      (mkKeymap "<leader>e" "<cmd>Neotree reveal<cr>" "󰙅 Reveal in Explorer")
 
-      (mkKeymap "<leader><leader>" "<cmd>Neotree reveal<cr>" "󰙅 Toggle Explorer (Reveal)")
+      # (mkKeymap "<leader><leader>" "<cmd>Neotree reveal<cr>" "󰙅 Toggle Explorer (Reveal)")
       (mkKeymap "\\" "<cmd>Neotree toggle<cr>" "󰙅 Toggle Explorer")
       # Spectre
       (mkKeymap "<leader>s" "<cmd>lua require('spectre').toggle()<cr>" " Search & Replace")

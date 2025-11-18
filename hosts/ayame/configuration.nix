@@ -40,7 +40,7 @@
     ../../modules/media.nix
 
     # steam boot
-    ../../modules/steam-boot.nix
+    # ../../modules/steam-boot.nix
   ];
 
   networking.hostName = "ayame"; # Define your hostname.
